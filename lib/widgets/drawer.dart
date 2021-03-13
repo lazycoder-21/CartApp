@@ -7,7 +7,7 @@ class MyDrawer extends StatelessWidget {
     final profileImgUrl = "https://picsum.photos/250?image=9";
     return Drawer(
       child: Container(
-        color: Colors.lightBlueAccent,
+        color: Colors.white,
         padding: EdgeInsets.zero,
         child: ListView(
           padding: EdgeInsets.zero,
@@ -15,9 +15,14 @@ class MyDrawer extends StatelessWidget {
             DrawerHeader(
               padding: EdgeInsets.zero,
               child: UserAccountsDrawerHeader(
+                decoration: BoxDecoration(color: Colors.white),
                 margin: EdgeInsets.zero,
-                accountName: Text("Ankit"),
-                accountEmail: Text("lostankit7"),
+                accountName: Text(
+                  "Ankit",
+                  style: TextStyle(color: Colors.blue, fontSize: 16),
+                ),
+                accountEmail: Text("lostankit7@gmail.com",
+                    style: TextStyle(color: Colors.blue, fontSize: 16)),
                 // currentAccountPicture: Image.network('https://picsum.photos/250?image=9'),
                 currentAccountPicture: CircleAvatar(
                   backgroundImage: NetworkImage(profileImgUrl),

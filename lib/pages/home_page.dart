@@ -6,8 +6,9 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     functiona(10);
     return Scaffold(
+      drawerScrimColor: Colors.lightBlueAccent,
       appBar: AppBar(
-        title: Text("Got it"),
+        title: Text("Flutter"),
       ),
       body: Center(
         child: Container(
