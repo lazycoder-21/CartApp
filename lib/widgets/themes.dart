@@ -7,8 +7,10 @@ class MyTheme {
       fontFamily: GoogleFonts.lato().fontFamily,
       appBarTheme: AppBarTheme(
           color: Colors.white,
-          iconTheme: IconThemeData(color: Colors.black),
-          textTheme: Theme.of(context).textTheme));
+          iconTheme: IconThemeData(color: Colors.blue),
+          textTheme: Theme.of(context)
+              .textTheme
+              .apply(bodyColor: Colors.blue, displayColor: Colors.blue)));
 
   static ThemeData darkTheme(BuildContext context) =>
       ThemeData(brightness: Brightness.dark);
