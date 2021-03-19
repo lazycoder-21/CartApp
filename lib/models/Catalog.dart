@@ -1,14 +1,18 @@
 class Item {
-  final String id;
+  final int id;
   final String name;
   final String description;
   final String color;
   final String image;
   final num price;
 
-  Item(this.id, this.name, this.description, this.color, this.image, this.price);
+  Item(
+      this.id, this.name, this.description, this.color, this.image, this.price);
 }
 
-final products = [
-  Item("id", "name", "description", "#33505a", "image", 100)
-];
+class CatalogModel {
+  static final items = [
+    Item(1, "name", "description", "#33505a",
+        "https://picsum.photos/250?image=9", 100)
+  ];
+}
