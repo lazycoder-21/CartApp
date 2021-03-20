@@ -1,0 +1,36 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "name",
+            "description": "description",
+            "color": "color",
+            "image": "https://picsum.photos/250?image=9",
+            "price": 100
+        },
+        {
+            "id": 1,
+            "name": "name",
+            "description": "description",
+            "color": "color",
+            "image": "https://picsum.photos/250?image=9",
+            "price": 100
+        },
+        {
+            "id": 1,
+            "name": "name",
+            "description": "description",
+            "color": "color",
+            "image": "https://picsum.photos/250?image=9",
+            "price": 100
+        },
+        {
+            "id": 1,
+            "name": "name",
+            "description": "description",
+            "color": "color",
+            "image": "https://picsum.photos/250?image=9",
+            "price": 100
+        }
+    ]
+}

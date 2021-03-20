@@ -7,12 +7,34 @@ class Item {
   final num price;
 
   Item(
-      this.id, this.name, this.description, this.color, this.image, this.price);
+      {this.id,
+      this.name,
+      this.description,
+      this.color,
+      this.image,
+      this.price});
+
+  factory Item.fromMap(Map<String, dynamic> map) {
+    return Item(
+      id: map["id"],
+      name: map["name"],
+      description: map["description"],
+      color: map["color"],
+      image: map["image"],
+      price: map["price"],
+    );
+  }
+
+  toMap() => {
+        "id": id,
+        "name": name,
+        "description": description,
+        "color": color,
+        "image": image,
+        "price": price,
+      };
 }
 
 class CatalogModel {
-  static final items = [
-    Item(1, "name", "description", "#33505a",
-        "https://picsum.photos/250?image=9", 100)
-  ];
+  static List<Item> items;
 }
