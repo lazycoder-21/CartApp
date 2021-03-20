@@ -37,13 +37,29 @@ class _HomePageState extends State<HomePage> {
         title: Text("Catalog App"),
       ),
       body: CatalogModel.items != null && CatalogModel.items.isNotEmpty
-          ? ListView.builder(
-              padding: const EdgeInsets.all(7),
-              itemCount: CatalogModel.items.length,
+          ? GridView.builder(
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2, mainAxisSpacing: 16, crossAxisSpacing: 18),
               itemBuilder: (context, index) {
-                return ItemWidget(item: CatalogModel.items[index]);
+                final item = CatalogModel.items[index];
+                return Card(
+                    clipBehavior: Clip.antiAlias,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10)),
+                    child: GridTile(
+                      header: Container(
+                        child: Text(
+                          item.name,
+                          style: TextStyle(color: Colors.white),
+                        ),
+                        padding: const EdgeInsets.all(5),
+                        decoration: BoxDecoration(color: Colors.blueAccent),
+                      ),
+                      child: Image.network(item.image),
+                      footer: Text(item.price.toString()),
+                    ));
               },
-            )
+              itemCount: CatalogModel.items.length)
           : Center(
               child: CircularProgressIndicator(),
             ),
