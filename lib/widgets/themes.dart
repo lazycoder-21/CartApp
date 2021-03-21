@@ -7,6 +7,7 @@ class MyTheme {
       fontFamily: GoogleFonts.poppins().fontFamily,
       appBarTheme: AppBarTheme(
           color: Colors.white,
+          elevation: 0,
           iconTheme: IconThemeData(color: Colors.blue),
           textTheme: Theme.of(context)
               .textTheme
