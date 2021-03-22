@@ -30,9 +30,9 @@ class MyTheme {
           color: Colors.black,
           elevation: 0,
           iconTheme: IconThemeData(color: Colors.white),
-          textTheme: Theme.of(context)
-              .textTheme
-              .apply(bodyColor: Colors.blue, displayColor: Colors.blue)));
+          textTheme: Theme.of(context).textTheme.copyWith(
+              headline6:
+                  context.textTheme.headline6.copyWith(color: Colors.white))));
 
   static Color creamColor = Vx.gray100;
   static Color darkCreamColor = Vx.gray900;
